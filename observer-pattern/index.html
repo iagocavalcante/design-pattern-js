@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Observer Pattern</title>
+  <link rel="stylesheet" href="./src/assets/style.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>TODO List</h1>
+    <div id="add-todo-container"></div>
+    <div id="todo-list-container"></div>
+  </div>
+</body>
+<script src="node_modules/unchained-js/dist/unchained.client.js"></script>
+<script>
+    // register a Service Worker.
+    UnchainedClient.register('sw.js', { scope: '/' })
+        .then(() =>
+            // The Service Worker is ready, we can now import the main file.
+            UnchainedClient.import('src/index.js')
+        );
+</script>
+</html>

@@ -1,0 +1,1 @@
+importScripts('node_modules/unchained-js/dist/unchained.sw.js');
